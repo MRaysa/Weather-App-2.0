@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/weather-logo.png" type="image/x-icon">
+    <title>Dashboard - Weather App</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-container">
+                <!-- Logo -->
+                <div class="logo">
+                    <img src="images/weather-logo.png" alt="Weather App Logo">
+                </div>
+
+                <!-- Middle Links -->
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="./average.html">Average</a></li>
+                    <li><a href="#">Locations</a></li>
+                    <li><a href="./index.html">Logout</a></li>
+                </ul>
+
+                <!-- Right Side: Search -->
+                <div class="navbar-right">
+                    <div class="search-bar">
+                        <input type="text" id="search-input" placeholder="Search Location" class="search-input">
+                        <button id="search-button" class="search-button">Search</button>
+
+                    </div>
+                    <!-- Avatar Button -->
+                    <div tabindex="0" role="button" class="avatar-button">
+                        <div class="avatar-image">
+                            <a href="./profile.html"><img alt="User Avatar"
+                                src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" /></a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Hamburger Icon (Visible on Small Screens) -->
+                <div class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <!-- Dashboard Container -->
+            <div class="dashboard-container">
+                <!-- Header Section -->
+                <div class="dashboard-header">
+                    <h1 id="location-header">Current Weather in Dhaka, Bangladesh</h1>
+                    <p>Stay updated with the latest weather conditions and forecasts.</p>
+                </div>
+
+                <!-- Weather Overview Section -->
+                <div class="weather-overview">
+                    <!-- Current Weather -->
+                    <div class="weather-card current-weather">
+                        <h2>Current Weather</h2>
+                        <div class="weather-info">
+                            <div class="weather-icon">
+                                <img id="current-weather-icon" src="images/sunny.png" alt="Weather Icon">
+                            </div>
+                            <div class="weather-details" id="current-weather-details">
+                                <!-- Dynamically populated -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 5-Day Forecast -->
+                    <div class="weather-card forecast">
+                        <h2>5-Day Forecast</h2>
+                        <div class="forecast-days" id="forecast-days">
+                            <!-- Dynamically populated -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="dashboard.js"></script>
+</body>
+
+</html>
